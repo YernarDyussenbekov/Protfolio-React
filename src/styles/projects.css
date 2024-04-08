@@ -1,0 +1,17 @@
+.projects-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-evenly; /* Distribute items evenly along the main axis */
+  align-items: flex-end; /* Align items at the start of the cross axis */
+}
+
+.project-card {
+  opacity: 0; /* Initially hide project cards */
+  transform: translateY(-50px); /* Start cards above their final position */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+}
+
+.project-card.active {
+  opacity: 1; /* Show project cards with opacity transition */
+  transform: translateY(0); /* Move cards back to their original position */
+}
